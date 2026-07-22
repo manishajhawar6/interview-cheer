@@ -15,16 +15,16 @@ type Input = {
   jobDescription?: string;
 };
 
-const SYSTEM = `You are an expert resume reviewer and ATS specialist. You give clear, supportive, specific feedback to job seekers. Return ONLY valid JSON matching the requested schema — no prose, no code fences.`;
+const SYSTEM = `You are an expert resume reviewer and ATS specialist. You give clear, supportive, specific feedback to job seekers. Return ONLY valid JSON matching the requested schema, no prose, no code fences.`;
 
 function buildPrompt(jd?: string) {
   const jdBlock = jd?.trim()
     ? `\n\nTARGET JOB DESCRIPTION:\n"""\n${jd.trim().slice(0, 6000)}\n"""\nTailor keyword and suggestion analysis to this role.`
-    : `\n\nNo job description was provided — evaluate the resume generally against modern ATS best practices.`;
+    : `\n\nNo job description was provided, evaluate the resume generally against modern ATS best practices.`;
 
   return `Analyze the attached resume PDF and return a JSON object with this exact shape:
 {
-  "ats_score": number (0-100 — how well this resume would pass a typical ATS parse and keyword match),
+  "ats_score": number (0-100, how well this resume would pass a typical ATS parse and keyword match),
   "score_rationale": string (1-2 sentences explaining the score),
   "summary": string (2-3 sentence professional summary of the candidate),
   "strengths": string[] (3-5 concrete strengths from the resume),

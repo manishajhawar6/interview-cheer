@@ -20,7 +20,7 @@ import { analyzeResume, type ResumeAnalysis } from "@/lib/analyze-resume.functio
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Resume Review — Turn your resume into more interviews" },
+      { title: "Resume Review: Turn your resume into more interviews" },
       {
         name: "description",
         content:
@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Get clear, practical feedback that helps you show employers the value you bring — without the guesswork.",
+          "Get clear, practical feedback that helps you show employers the value you bring, without the guesswork.",
       },
     ],
   }),
@@ -65,7 +65,7 @@ function Hero() {
         more interviews.
       </h1>
       <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
-        Get clear, practical feedback that helps you show employers the value you bring —
+        Get clear, practical feedback that helps you show employers the value you bring ,
         without the guesswork.
       </p>
       <div className="mt-12 grid gap-4 sm:grid-cols-3">
@@ -132,22 +132,22 @@ function DesignDecisions() {
     {
       icon: <Star className="h-5 w-5" />,
       title: "Why an ATS score?",
-      body: "Most resumes are filtered by software before a human ever sees them. A single 0–100 score gives you an at-a-glance read on how well yours parses — grounded in a short rationale, not a black box.",
+      body: "Most resumes are filtered by software before a human ever sees them. A single 0–100 score gives you an at-a-glance read on how well yours parses, grounded in a short rationale, not a black box.",
     },
     {
       icon: <TrendingUp className="h-5 w-5" />,
       title: "Why the top suggestions, not a long list?",
-      body: "A 20-item checklist is easy to nod at and hard to act on. We surface a handful of high-leverage changes first so you can actually make them tonight — depth is available, but focus comes first.",
+      body: "A 20-item checklist is easy to nod at and hard to act on. We surface a handful of high-leverage changes first so you can actually make them tonight, depth is available, but focus comes first.",
     },
     {
       icon: <Target className="h-5 w-5" />,
       title: "Why an optional job description?",
-      body: "Pasting a role turns generic advice into role-specific keyword and framing feedback. Skipping it still gets you a solid general review — the tool meets you where you are.",
+      body: "Pasting a role turns generic advice into role-specific keyword and framing feedback. Skipping it still gets you a solid general review, the tool meets you where you are.",
     },
     {
       icon: <Leaf className="h-5 w-5" />,
       title: "Why privacy-first, no account?",
-      body: "Job searching is personal. Your PDF is used for this review and then discarded — no sign-up, no history, no dashboard to manage. Come back only when you have a new draft.",
+      body: "Job searching is personal. Your PDF is used for this review and then discarded, no sign-up, no history, no dashboard to manage. Come back only when you have a new draft.",
     },
   ];
   return (
@@ -163,8 +163,7 @@ function DesignDecisions() {
         </div>
         <h2 className="mt-4 font-serif text-4xl text-primary">A few deliberate choices</h2>
         <p className="mt-3 max-w-2xl text-muted-foreground">
-          This review is intentionally narrow. Every element on the results page earned its place —
-          here's the thinking behind the calls that shaped it.
+          This review is intentionally narrow. Every element on the results page earned its place. Here's the thinking behind the calls that shaped it.
         </p>
         <div className="mt-8 grid gap-5 sm:grid-cols-2">
           {decisions.map((d) => (
@@ -436,7 +435,7 @@ function Results({ data, onReset }: { data: ResumeAnalysis; onReset: () => void 
             ))}
           </div>
         ) : (
-          <p className="mt-4 text-sm text-muted-foreground">No major gaps found — nice work.</p>
+          <p className="mt-4 text-sm text-muted-foreground">No major gaps found, nice work.</p>
         )}
       </div>
 
