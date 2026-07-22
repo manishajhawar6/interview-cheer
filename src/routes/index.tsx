@@ -127,6 +127,63 @@ function WhatYouGet() {
   );
 }
 
+function DesignDecisions() {
+  const decisions = [
+    {
+      icon: <Star className="h-5 w-5" />,
+      title: "Why an ATS score?",
+      body: "Most resumes are filtered by software before a human ever sees them. A single 0–100 score gives you an at-a-glance read on how well yours parses — grounded in a short rationale, not a black box.",
+    },
+    {
+      icon: <TrendingUp className="h-5 w-5" />,
+      title: "Why the top suggestions, not a long list?",
+      body: "A 20-item checklist is easy to nod at and hard to act on. We surface a handful of high-leverage changes first so you can actually make them tonight — depth is available, but focus comes first.",
+    },
+    {
+      icon: <Target className="h-5 w-5" />,
+      title: "Why an optional job description?",
+      body: "Pasting a role turns generic advice into role-specific keyword and framing feedback. Skipping it still gets you a solid general review — the tool meets you where you are.",
+    },
+    {
+      icon: <Leaf className="h-5 w-5" />,
+      title: "Why privacy-first, no account?",
+      body: "Job searching is personal. Your PDF is used for this review and then discarded — no sign-up, no history, no dashboard to manage. Come back only when you have a new draft.",
+    },
+  ];
+  return (
+    <section className="mx-auto max-w-4xl px-6 pb-16">
+      <div className="rounded-2xl border border-border bg-card p-8 sm:p-12">
+        <div className="flex items-center gap-3">
+          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent text-primary">
+            <Compass className="h-5 w-5" />
+          </span>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+            How this tool is built
+          </p>
+        </div>
+        <h2 className="mt-4 font-serif text-4xl text-primary">A few deliberate choices</h2>
+        <p className="mt-3 max-w-2xl text-muted-foreground">
+          This review is intentionally narrow. Every element on the results page earned its place —
+          here's the thinking behind the calls that shaped it.
+        </p>
+        <div className="mt-8 grid gap-5 sm:grid-cols-2">
+          {decisions.map((d) => (
+            <div key={d.title} className="rounded-xl border border-border bg-background p-5">
+              <div className="flex items-center gap-3">
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-accent text-primary">
+                  {d.icon}
+                </span>
+                <h3 className="font-semibold text-foreground">{d.title}</h3>
+              </div>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{d.body}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 async function fileToBase64(file: File): Promise<string> {
   const buf = await file.arrayBuffer();
   const bytes = new Uint8Array(buf);
