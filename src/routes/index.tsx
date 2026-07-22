@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import {
   ArrowRight,
   Check,
+  Compass,
   FileText,
   Leaf,
   Sparkles,
