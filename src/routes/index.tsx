@@ -494,6 +494,7 @@ function Index() {
         <>
           <Hero />
           <UploadSection onAnalyze={handleAnalyze} loading={loading} error={error} />
+          <DesignDecisions />
         </>
       )}
       <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">
