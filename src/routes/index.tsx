@@ -253,13 +253,7 @@ function UploadSection({
               Choose PDF
             </label>
 
-            <input
-              id="resume-upload"
-              type="file"
-              accept=".pdf,application/pdf"
-              className="sr-only"
-              onChange={(e) => handleFiles(e.target.files)}
-            />
+            <input id="resume-upload" type="file" className="sr-only" onChange={(e) => handleFiles(e.target.files)} />
             <p className="mt-3 text-xs text-muted-foreground">One PDF, up to 10 MB</p>
           </div>
 
