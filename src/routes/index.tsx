@@ -26,11 +26,11 @@ export const Route = createFileRoute("/")({
         content:
           "Upload your resume for a private, ATS-aware AI review with score, summary, missing keywords, and personalized suggestions.",
       },
-      { property: "og:title", content: "Turn your resume into more interviews" },
+      { property: "og:title", content: "Resume Review: Turn your resume into more interviews" },
       {
         property: "og:description",
         content:
-          "Get clear, practical feedback that helps you show employers the value you bring, without the guesswork.",
+          "Upload your resume for a private, ATS-aware AI review with score, summary, missing keywords, and personalized suggestions.",
       },
     ],
   }),

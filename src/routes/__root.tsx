@@ -81,16 +81,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Upload your resume for an ATS-aware AI review with score, summary, missing keywords, and personalized suggestions.",
+          "Upload your resume for a private, ATS-aware AI review with score, summary, missing keywords, and personalized suggestions.",
       },
-      { property: "og:title", content: "Resume Review" },
+      { property: "og:title", content: "Resume Review: Turn your resume into more interviews" },
       {
         property: "og:description",
         content:
-          "A calmer way to prepare, clear, practical resume feedback for your next opportunity.",
+          "Upload your resume for a private, ATS-aware AI review with score, summary, missing keywords, and personalized suggestions.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Resume Review: Turn your resume into more interviews" },
+      { name: "twitter:description", content: "Upload your resume for a private, ATS-aware AI review with score, summary, missing keywords, and personalized suggestions." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/28bceb5b-1923-4aa2-8c45-df9e45f3f94c/id-preview-8b418b31--10316748-4355-4e39-a26b-c9637b7e6309.lovable.app-1784717511713.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/28bceb5b-1923-4aa2-8c45-df9e45f3f94c/id-preview-8b418b31--10316748-4355-4e39-a26b-c9637b7e6309.lovable.app-1784717511713.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
