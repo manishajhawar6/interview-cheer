@@ -46,9 +46,7 @@ function Header() {
         </div>
         <span className="font-semibold text-foreground">Resume Review</span>
       </div>
-      <span className="hidden text-sm text-muted-foreground sm:block">
-        Built for your next opportunity
-      </span>
+      <span className="hidden text-sm text-muted-foreground sm:block">Built for your next opportunity</span>
     </header>
   );
 }
@@ -56,17 +54,14 @@ function Header() {
 function Hero() {
   return (
     <section className="mx-auto max-w-4xl px-6 pt-10 pb-16 text-center">
-      <p className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-        A calmer way to prepare
-      </p>
+      <p className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-primary">A calmer way to prepare</p>
       <h1 className="font-serif text-5xl leading-[1.05] text-primary sm:text-6xl md:text-7xl">
         Turn your resume into
         <br />
         more interviews.
       </h1>
       <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
-        Get clear, practical feedback that helps you show employers the value you bring ,
-        without the guesswork.
+        Get clear, practical feedback that helps you show employers the value you bring , without the guesswork.
       </p>
       <div className="mt-12 grid gap-4 sm:grid-cols-3">
         <FeatureCard
@@ -93,9 +88,7 @@ function FeatureCard({ icon, title, body }: { icon: React.ReactNode; title: stri
   return (
     <div className="rounded-xl border border-border bg-card p-5 text-left">
       <div className="flex items-center gap-3">
-        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-accent text-primary">
-          {icon}
-        </span>
+        <span className="flex h-8 w-8 items-center justify-center rounded-full bg-accent text-primary">{icon}</span>
         <h3 className="font-semibold text-foreground">{title}</h3>
       </div>
       <p className="mt-2 text-sm text-muted-foreground">{body}</p>
@@ -157,13 +150,12 @@ function DesignDecisions() {
           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-accent text-primary">
             <Compass className="h-5 w-5" />
           </span>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-            How this tool is built
-          </p>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">How this tool is built</p>
         </div>
         <h2 className="mt-4 font-serif text-4xl text-primary">A few deliberate choices</h2>
         <p className="mt-3 max-w-2xl text-muted-foreground">
-          This review is intentionally narrow. Every element on the results page earned its place. Here's the thinking behind the calls that shaped it.
+          This review is intentionally narrow. Every element on the results page earned its place. Here's the thinking
+          behind the calls that shaped it.
         </p>
         <div className="mt-8 grid gap-5 sm:grid-cols-2">
           {decisions.map((d) => (
@@ -225,9 +217,7 @@ function UploadSection({
     <section className="mx-auto max-w-3xl px-6 pb-24">
       <div className="rounded-2xl border border-border bg-card p-8 sm:p-12">
         <div className="text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-            Start your review
-          </p>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Start your review</p>
           <h2 className="mt-3 font-serif text-4xl text-primary">Upload your resume</h2>
           <p className="mt-3 text-muted-foreground">
             PDF format only. You can add a job description for more tailored feedback.
@@ -256,18 +246,18 @@ function UploadSection({
               <p className="mt-4 text-muted-foreground">Drag & drop your PDF</p>
             )}
             <p className="mt-2 text-sm text-muted-foreground">or</p>
-            <button
-              type="button"
-              onClick={() => inputRef.current?.click()}
-              className="mt-2 rounded-md bg-primary px-5 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
+            <label
+              htmlFor="resume-upload"
+              className="mt-2 inline-flex cursor-pointer rounded-md bg-primary px-5 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90"
             >
               Choose PDF
-            </button>
+            </label>
+
             <input
-              ref={inputRef}
+              id="resume-upload"
               type="file"
-              accept="application/pdf"
-              className="hidden"
+              accept=".pdf,application/pdf"
+              className="sr-only"
               onChange={(e) => handleFiles(e.target.files)}
             />
             <p className="mt-3 text-xs text-muted-foreground">One PDF, up to 10 MB</p>
@@ -343,8 +333,7 @@ function ScoreRing({ score }: { score: number }) {
   const r = (size - stroke) / 2;
   const c = 2 * Math.PI * r;
   const offset = c - (score / 100) * c;
-  const color =
-    score >= 80 ? "oklch(0.55 0.15 155)" : score >= 60 ? "oklch(0.6 0.13 90)" : "oklch(0.6 0.18 30)";
+  const color = score >= 80 ? "oklch(0.55 0.15 155)" : score >= 60 ? "oklch(0.6 0.13 90)" : "oklch(0.6 0.18 30)";
   return (
     <svg width={size} height={size} className="-rotate-90">
       <circle cx={size / 2} cy={size / 2} r={r} stroke="oklch(0.9 0.02 130)" strokeWidth={stroke} fill="none" />
@@ -369,9 +358,7 @@ function Results({ data, onReset }: { data: ResumeAnalysis; onReset: () => void 
     <section className="mx-auto max-w-4xl px-6 pb-24">
       <div className="mb-8 flex items-center justify-between">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-            Your review
-          </p>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Your review</p>
           <h2 className="mt-2 font-serif text-4xl text-primary">Resume feedback</h2>
         </div>
         <button
@@ -391,9 +378,7 @@ function Results({ data, onReset }: { data: ResumeAnalysis; onReset: () => void 
               <div className="text-xs uppercase tracking-widest text-muted-foreground">ATS Score</div>
             </div>
           </div>
-          <p className="mt-4 max-w-[220px] text-center text-sm text-muted-foreground">
-            {data.score_rationale}
-          </p>
+          <p className="mt-4 max-w-[220px] text-center text-sm text-muted-foreground">{data.score_rationale}</p>
         </div>
         <div className="rounded-2xl border border-border bg-card p-8">
           <h3 className="flex items-center gap-2 font-serif text-2xl text-primary">
@@ -420,16 +405,11 @@ function Results({ data, onReset }: { data: ResumeAnalysis; onReset: () => void 
         <h3 className="flex items-center gap-2 font-serif text-2xl text-primary">
           <Target className="h-5 w-5" /> Missing keywords
         </h3>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Add these where they authentically match your experience.
-        </p>
+        <p className="mt-2 text-sm text-muted-foreground">Add these where they authentically match your experience.</p>
         {data.missing_keywords.length > 0 ? (
           <div className="mt-4 flex flex-wrap gap-2">
             {data.missing_keywords.map((k) => (
-              <span
-                key={k}
-                className="rounded-full border border-border bg-accent px-3 py-1 text-sm text-primary"
-              >
+              <span key={k} className="rounded-full border border-border bg-accent px-3 py-1 text-sm text-primary">
                 {k}
               </span>
             ))}
